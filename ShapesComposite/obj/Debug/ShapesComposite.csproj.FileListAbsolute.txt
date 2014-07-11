@@ -1,0 +1,8 @@
+C:\Users\cristiana.grigoriu\Documents\Visual Studio 2012\Projects\OOP\ShapesComposite\bin\Debug\ShapesComposite.exe.config
+C:\Users\cristiana.grigoriu\Documents\Visual Studio 2012\Projects\OOP\ShapesComposite\bin\Debug\ShapesComposite.exe
+C:\Users\cristiana.grigoriu\Documents\Visual Studio 2012\Projects\OOP\ShapesComposite\bin\Debug\ShapesComposite.pdb
+C:\Users\cristiana.grigoriu\Documents\Visual Studio 2012\Projects\OOP\ShapesComposite\bin\Debug\Shapes.exe
+C:\Users\cristiana.grigoriu\Documents\Visual Studio 2012\Projects\OOP\ShapesComposite\bin\Debug\Shapes.pdb
+C:\Users\cristiana.grigoriu\Documents\Visual Studio 2012\Projects\OOP\ShapesComposite\obj\Debug\ShapesComposite.csprojResolveAssemblyReference.cache
+C:\Users\cristiana.grigoriu\Documents\Visual Studio 2012\Projects\OOP\ShapesComposite\obj\Debug\ShapesComposite.exe
+C:\Users\cristiana.grigoriu\Documents\Visual Studio 2012\Projects\OOP\ShapesComposite\obj\Debug\ShapesComposite.pdb

@@ -5,6 +5,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LinqUsers", "LinqUsers\Linq
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Shapes", "Shapes\Shapes.csproj", "{38103037-70F8-4461-8419-786D02E6A18E}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ShapesComposite", "ShapesComposite\ShapesComposite.csproj", "{32C5A4EB-F51A-400A-9939-A8E270800DF1}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -19,6 +21,10 @@ Global
 		{38103037-70F8-4461-8419-786D02E6A18E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{38103037-70F8-4461-8419-786D02E6A18E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{38103037-70F8-4461-8419-786D02E6A18E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{32C5A4EB-F51A-400A-9939-A8E270800DF1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{32C5A4EB-F51A-400A-9939-A8E270800DF1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{32C5A4EB-F51A-400A-9939-A8E270800DF1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{32C5A4EB-F51A-400A-9939-A8E270800DF1}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
