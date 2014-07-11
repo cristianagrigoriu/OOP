@@ -1,0 +1,6 @@
+c:\users\cristiana.grigoriu\documents\visual studio 2012\Projects\OOP\Shapes\bin\Debug\Shapes.exe.config
+c:\users\cristiana.grigoriu\documents\visual studio 2012\Projects\OOP\Shapes\bin\Debug\Shapes.exe
+c:\users\cristiana.grigoriu\documents\visual studio 2012\Projects\OOP\Shapes\bin\Debug\Shapes.pdb
+c:\users\cristiana.grigoriu\documents\visual studio 2012\Projects\OOP\Shapes\obj\Debug\Shapes.exe
+c:\users\cristiana.grigoriu\documents\visual studio 2012\Projects\OOP\Shapes\obj\Debug\Shapes.pdb
+c:\users\cristiana.grigoriu\documents\visual studio 2012\Projects\OOP\Shapes\obj\Debug\Shapes.csprojResolveAssemblyReference.cache
