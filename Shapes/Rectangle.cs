@@ -6,8 +6,16 @@ using System.Threading.Tasks;
 
 namespace Shapes
 {
-    class Rectangle : Shape
+    public class Rectangle : Shape
     {
+        private double area;
+
+        public double Area
+        {
+            get { return Length*Width; }
+            set { area = value; }
+        }
+
         public string Colour { get; set; }
         public double Length { get; set; }
         public double Width { get; set; }
@@ -26,7 +34,7 @@ namespace Shapes
 
         public override string ToString()
         {
-            return Colour + " " + Length + " " + Width;
+            return Colour + " " + Length + " " + Width + " Area = " + Area;
         }
     }
 }

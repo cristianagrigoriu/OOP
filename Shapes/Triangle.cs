@@ -6,8 +6,16 @@ using System.Threading.Tasks;
 
 namespace Shapes
 {
-    class Triangle : Shape
+    public class Triangle : Shape
     {
+        private double area;
+
+        public double Area 
+        {
+            get { return 0.5 * Base * Height; }
+            set { area = value; } 
+        }
+
         public double Base { get; set; }
         public double Height { get; set; }
 
@@ -24,7 +32,7 @@ namespace Shapes
 
         public override string ToString()
         {
-            return Colour + " " + Base + " " + Height;
+            return Colour + " " + Base + " " + Height + " Area = " + Area;
         }
     }
 }

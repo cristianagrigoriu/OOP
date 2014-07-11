@@ -17,10 +17,11 @@ namespace Shapes
                 new Rectangle("green", 9, 0),
                 new Triangle(9, 1),
                 new Triangle(2, 12),
-                new Triangle(1, 9)
+                new Triangle(1, 70)
             };
 
-            shapes.ForEach(x => Console.WriteLine(x.GetType().ToString() + " " + x.ToString() + " Area = " + x.GetArea()));
+            ListInfo l = new ListInfo();
+            l.DisplayInformation(shapes);
         }
     }
 }

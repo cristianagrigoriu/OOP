@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Shapes
 {
-    abstract class Shape : IShape
+    public abstract class Shape : IShape
     {
         public string Colour { get { return "blue"; } set {}}
 

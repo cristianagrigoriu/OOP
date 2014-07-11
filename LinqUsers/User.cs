@@ -11,10 +11,17 @@ namespace LinqUsers
         protected string username;
         public string Username { get { return username; } set { username = value; } }
 
-        public string Email { get; set; }
-        public string Password { get; set; }
-        public int Id { get; set; }
-        public DateTime InsertTime { get; set; }
+        protected string email;
+        public string Email { get { return email; } set { email = value; } }
+
+        protected string password;
+        public string Password { get { return password; } set { email = value; } }
+
+        protected int id;
+        public int Id { get { return id; } set { id = value; } }
+
+        protected DateTime insertTime ;
+        public DateTime InsertTime { get { return insertTime; } set { insertTime = value; } }
 
         public User(string username, string password, int id)
         {

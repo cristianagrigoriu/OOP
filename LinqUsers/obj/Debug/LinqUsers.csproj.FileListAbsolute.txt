@@ -4,3 +4,5 @@ c:\users\cristiana.grigoriu\documents\visual studio 2012\Projects\OOP\LinqUsers\
 c:\users\cristiana.grigoriu\documents\visual studio 2012\Projects\OOP\LinqUsers\bin\Debug\LinqUsers.pdb
 c:\users\cristiana.grigoriu\documents\visual studio 2012\Projects\OOP\LinqUsers\obj\Debug\LinqUsers.exe
 c:\users\cristiana.grigoriu\documents\visual studio 2012\Projects\OOP\LinqUsers\obj\Debug\LinqUsers.pdb
+C:\Users\cristiana.grigoriu\Documents\Visual Studio 2012\Projects\OOP\LinqUsers\bin\Debug\Shapes.exe
+C:\Users\cristiana.grigoriu\Documents\Visual Studio 2012\Projects\OOP\LinqUsers\bin\Debug\Shapes.pdb

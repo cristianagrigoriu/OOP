@@ -6,12 +6,8 @@ using System.Threading.Tasks;
 
 namespace Shapes
 {
-    public interface IShape : IObject
+    public interface IObject
     {
-        string Colour { get; set; }
-
-        double GetArea();
-
         string ToString();
     }
 }
