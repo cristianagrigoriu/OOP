@@ -11,7 +11,5 @@ namespace Shapes
         string Colour { get; set; }
 
         double GetArea();
-
-        string ToString();
     }
 }

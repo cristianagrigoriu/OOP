@@ -10,17 +10,17 @@ namespace Shapes
     {
         public void DisplayInformation(List<IShape> shapes)
         {
-            shapes.ForEach(x => Console.WriteLine(x.GetType().ToString() + " " + x.ToString()));
+            shapes.ForEach(x => Console.WriteLine(x.GetType().ToString() + " " + x.DisplayInfo()));
         }
 
         public void DisplayInfoGeneral(List<IObject> objects)
         {
-            objects.ForEach(x => Console.WriteLine(x.GetType().ToString() + " " + x.ToString()));
+            objects.ForEach(x => Console.WriteLine(x.GetType().ToString() + " " + x.DisplayInfo()));
         }
 
-        public void DisplayInfoGeneric<T>(List<T> objectsList)
+        public void DisplayInfoGeneric<T>(List<T> objectsList) where T : IObject
         {
-            objectsList.ForEach(x => Console.WriteLine(x.GetType().ToString() + " " + x.ToString()));
+            objectsList.ForEach(x => Console.WriteLine(x.GetType().ToString() + " " + x.DisplayInfo()));
         }
     }
 }

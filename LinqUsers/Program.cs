@@ -24,14 +24,14 @@ namespace LinqUsers
             };
 
             Console.WriteLine("---User List---");
-            users.ForEach(x => Console.WriteLine(x.ToString()));
+            users.ForEach(x => Console.WriteLine(x.DisplayInfo()));
             Console.WriteLine();
 
             //List<IUser> iUsers = users.ConvertAll<IUser>(x => (IUser) x);
             var iUsers = users.Select(x => new {Username = x.Username, Password = x.Password}).ToList();
 
             Console.WriteLine("---Converted List---");
-            iUsers.ForEach(x => Console.WriteLine(x));
+            iUsers.ForEach(x => Console.WriteLine(x.Username + " " + x.Password));
             Console.WriteLine();
 
             List<User> admins = users.Where( x => x.Username.StartsWith("admin")).ToList();
@@ -40,20 +40,20 @@ namespace LinqUsers
 
             List<User> firstTwoUsers = users.Take(2).OrderByDescending(x => x.Username).ToList();
             Console.WriteLine("---First Two Users---");
-            firstTwoUsers.ForEach(x => Console.WriteLine(x));
+            firstTwoUsers.ForEach(x => Console.WriteLine(x.DisplayInfo()));
             Console.WriteLine();
 
             //e diferit de fiecare data
             User newestUser = users.OrderByDescending(x => x.InsertTime).FirstOrDefault();
-            Console.WriteLine("Newest user is {0}", newestUser);
+            Console.WriteLine("Newest user is {0}", newestUser.DisplayInfo());
             Console.WriteLine();
            
             User minIdUser = users.OrderBy(x => x.Id).FirstOrDefault();
-            Console.WriteLine("User with minimum id: {0}", minIdUser);
+            Console.WriteLine("User with minimum id: {0}", minIdUser.DisplayInfo());
             Console.WriteLine();
 
             User lookedForUser = users.Where(x => x.Equals(minIdUser)).FirstOrDefault();
-            Console.WriteLine("I looked for {0}", lookedForUser);
+            Console.WriteLine("I looked for {0}", lookedForUser.DisplayInfo());
 
             List<IObject> objects = new List<IObject>
             {

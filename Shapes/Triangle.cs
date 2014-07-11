@@ -32,7 +32,7 @@ namespace Shapes
 
         public override string ToString()
         {
-            return Colour + " " + Base + " " + Height + " Area = " + Area;
+            return Colour + " " + Base + " " + Height;
         }
     }
 }

@@ -10,9 +10,9 @@ namespace Shapes
     {
         public string Colour { get { return "blue"; } set {}}
 
-        public override string ToString()
+        public string DisplayInfo()
         {
-            return Colour;
+            return ToString() + " Area = " + GetArea();
         }
 
         public abstract double GetArea();

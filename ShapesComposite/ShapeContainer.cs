@@ -31,7 +31,7 @@ namespace ShapesComposite
             return result;
         }
 
-        public string ToString()
+        public string DisplayInfo()
         {
             string result = "";
 

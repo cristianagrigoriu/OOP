@@ -16,7 +16,6 @@ namespace Shapes
             set { area = value; }
         }
 
-        public string Colour { get; set; }
         public double Length { get; set; }
         public double Width { get; set; }
 
@@ -34,7 +33,7 @@ namespace Shapes
 
         public override string ToString()
         {
-            return Colour + " " + Length + " " + Width + " Area = " + Area;
+            return Colour + " " + Length + " " + Width;
         }
     }
 }

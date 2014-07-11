@@ -15,7 +15,7 @@ namespace LinqUsers
         public string Email { get { return email; } set { email = value; } }
 
         protected string password;
-        public string Password { get { return password; } set { email = value; } }
+        public string Password { get { return password; } set { password = value; } }
 
         protected int id;
         public int Id { get { return id; } set { id = value; } }
@@ -36,6 +36,11 @@ namespace LinqUsers
         public override string ToString()
         {
             return Username + " " + Email + " " + Password + " " + Id;
+        }
+
+        public string DisplayInfo()
+        {
+            return ToString();
         }
     }
 }
