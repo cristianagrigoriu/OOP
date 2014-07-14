@@ -31,13 +31,14 @@ namespace ShapesComposite
             return result;
         }
 
-        public string DisplayInfo()
+        public StringBuilder DisplayInfo()
         {
-            string result = "";
+            StringBuilder result = new StringBuilder("");
 
             foreach (IShape shape in this.childShapes)
             {
-                result += shape.ToString();
+                result.Append(shape.DisplayInfo());
+                result.AppendLine();
             }
 
             return result;

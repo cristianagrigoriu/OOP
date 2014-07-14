@@ -1,0 +1,6 @@
+C:\Users\cristiana.grigoriu\Documents\Visual Studio 2012\Projects\OOP\UsersExam\bin\Debug\UsersExam.exe.config
+C:\Users\cristiana.grigoriu\Documents\Visual Studio 2012\Projects\OOP\UsersExam\bin\Debug\UsersExam.exe
+C:\Users\cristiana.grigoriu\Documents\Visual Studio 2012\Projects\OOP\UsersExam\bin\Debug\UsersExam.pdb
+C:\Users\cristiana.grigoriu\Documents\Visual Studio 2012\Projects\OOP\UsersExam\obj\Debug\UsersExam.exe
+C:\Users\cristiana.grigoriu\Documents\Visual Studio 2012\Projects\OOP\UsersExam\obj\Debug\UsersExam.pdb
+C:\Users\cristiana.grigoriu\Documents\Visual Studio 2012\Projects\OOP\UsersExam\obj\Debug\UsersExam.csprojResolveAssemblyReference.cache

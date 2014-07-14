@@ -8,6 +8,6 @@ namespace Shapes
 {
     public interface IObject
     {
-        string DisplayInfo();
+        StringBuilder DisplayInfo();
     }
 }

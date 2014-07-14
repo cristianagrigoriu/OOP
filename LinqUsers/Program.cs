@@ -17,7 +17,7 @@ namespace LinqUsers
             List<User> users = exercise.CreateAndInitializeUsers();
             exercise.ShowUsers(users, "---User List---");
 
-            var iUsers = users.Select(x => new {Username = x.Username, Password = x.Password}).ToList();
+            var iUsers = users.Select(x => new {x.Username, x.Password}).ToList();
             Console.WriteLine("---Converted List---");
             iUsers.ForEach(x => Console.WriteLine(x.Username + " " + x.Password));
             Console.WriteLine();

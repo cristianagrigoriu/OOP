@@ -30,13 +30,12 @@ namespace LinqUsers
 
         public int CountAdmins(List<User> users)
         {
-            List<User> admins = users.Where(x => x.Username.StartsWith("admin")).ToList();
-            return admins.Count;
+            return users.Count(x => x.Username.StartsWith("admin"));
         }
 
         public List<User> FirstTwoUsers(List<User> users)
         {
-            return users.Take(2).OrderByDescending(x => x.Username).ToList();
+            return users.OrderByDescending(x => x.Username).Take(2).ToList();
         }
 
         public User NewestUser(List<User> users)
@@ -52,7 +51,7 @@ namespace LinqUsers
 
         public User FindByObject(List<User> users, User lookedForUser)
         {
-            return users.Where(x => x.Equals(lookedForUser)).FirstOrDefault();
+            return users.FirstOrDefault(x => x.Equals(lookedForUser));
         }
 
         public void ShowUsers(List<User> users, string message)

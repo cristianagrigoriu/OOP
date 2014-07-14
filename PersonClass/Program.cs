@@ -12,6 +12,20 @@ namespace PersonClass
     {
         static void Main(string[] args)
         {
+            ExerciseShowCollections();
+
+            ExerciseObservers();
+        }
+
+        private static void ExerciseObservers()
+        {
+            /* Go On Holiday Event */
+            HolidayEventScenario s = new HolidayEventScenario();
+            s.showScenario();
+        }
+
+        private static void ExerciseShowCollections()
+        {
             /* Hierarchy */
             Hierarchy h = new Hierarchy();
             List<Employee> people = h.CreateHierarchy();
@@ -19,10 +33,6 @@ namespace PersonClass
             /* Collections */
             Collections c = new Collections();
             c.CreateCollections();
-
-            /* Go On Holiday Event */
-            HolidayEventScenario s = new HolidayEventScenario();
-            s.showScenario();
         }
     }
 }

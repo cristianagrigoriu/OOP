@@ -24,7 +24,8 @@ namespace ShapesComposite
 
             Console.WriteLine(shapeContainer3.ToString());
             Console.WriteLine("Total Area = {0}", shapeContainer3.GetArea());
-            
+            Console.WriteLine(shapeContainer3.DisplayInfo());
+
         }
     }
 }

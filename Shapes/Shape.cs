@@ -10,9 +10,12 @@ namespace Shapes
     {
         public string Colour { get { return "blue"; } set {}}
 
-        public string DisplayInfo()
+        public StringBuilder DisplayInfo()
         {
-            return ToString() + " Area = " + GetArea();
+            StringBuilder result = new StringBuilder(ToString());
+            result.Append(" Area = ");
+            result.Append(GetArea());
+            return result;
         }
 
         public abstract double GetArea();

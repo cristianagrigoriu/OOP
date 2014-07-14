@@ -33,7 +33,7 @@ namespace Shapes
 
         public override string ToString()
         {
-            return Colour + " " + Length + " " + Width;
+            return String.Format(Colour + " " + Length + " " + Width).ToString();
         }
     }
 }

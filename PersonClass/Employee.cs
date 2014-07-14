@@ -64,7 +64,11 @@ namespace PersonClass
 
         public override string ToString()
         {
-            return base.ToString() + " " + this.HireDate.ToString();
+            StringBuilder result = new StringBuilder();
+            result.Append(base.ToString());
+            result.Append(" ");
+            result.Append(this.HireDate.ToString());
+            return result.ToString();
         }
     }
 }

@@ -38,9 +38,9 @@ namespace LinqUsers
             return Username + " " + Email + " " + Password + " " + Id;
         }
 
-        public string DisplayInfo()
+        public StringBuilder DisplayInfo()
         {
-            return ToString();
+            return new StringBuilder(ToString());
         }
     }
 }
