@@ -41,10 +41,15 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DisplayToConsole.cs" />
+    <Compile Include="IAbstractDisplayInfo.cs" />
     <Compile Include="AdminUser.cs" />
+    <Compile Include="ConcreteDisplayInfo.cs" />
+    <Compile Include="DisplayToFile.cs" />
     <Compile Include="ExamTakingStudentUser.cs" />
     <Compile Include="ExamTakingTeacherAssistantUser.cs" />
     <Compile Include="ExamTakingTeacherUser.cs" />
+    <Compile Include="IDisplayInfo.cs" />
     <Compile Include="IExamDelegate.cs" />
     <Compile Include="ExamTakingUser.cs" />
     <Compile Include="Program.cs" />
