@@ -7,29 +7,30 @@ using UsersExam;
 
 namespace UsersExam
 {
-    class TeacherAssistantUser : User, IExamTakingUser
+    class TeacherAssistantUser : User
     {
         public TeacherUser AssignedTeacher { get; set; }
+        private IExamDelegate examBehaviour;
 
         public TeacherAssistantUser(string username, string password, int id, TeacherUser assignedTeacher) : base(username, password, id)
         {
             this.AssignedTeacher = assignedTeacher;
+            examBehaviour = new ExamTakingTeacherAssistantUser();
         }
 
-        public void TakeExam()
+        public override string Login()
         {
-            SuperviseStudents();
-            GradeStudents();
+            return String.Format("Teacher assistant {0} has logged in.", username);
         }
 
-        private void GradeStudents()
+        public override string Logout()
         {
-            Console.WriteLine("Teacher assistant {0} is grading students.", username);
+            return String.Format("Teacher assistant {0} has logged out.", username);
         }
 
-        private void SuperviseStudents()
+        public string TakeExam()
         {
-            Console.WriteLine("Teacher assistant {0} is supervising students.", username);
+            return examBehaviour.TakeExam();
         }
     }
 }

@@ -41,9 +41,15 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="IExamTakingUser.cs" />
+    <Compile Include="AdminUser.cs" />
+    <Compile Include="ExamTakingStudentUser.cs" />
+    <Compile Include="ExamTakingTeacherAssistantUser.cs" />
+    <Compile Include="ExamTakingTeacherUser.cs" />
+    <Compile Include="IExamDelegate.cs" />
+    <Compile Include="ExamTakingUser.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SecretaryUser.cs" />
     <Compile Include="StudentUser.cs" />
     <Compile Include="TeacherAssistantUser.cs" />
     <Compile Include="TeacherUser.cs" />

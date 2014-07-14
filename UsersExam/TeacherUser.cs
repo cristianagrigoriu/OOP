@@ -7,15 +7,17 @@ using UsersExam;
 
 namespace UsersExam
 {
-    class TeacherUser : User, IExamTakingUser
+    class TeacherUser : User
     {
         private double Salary;
         private string Subject;
+        private IExamDelegate examBehaviour;
 
         public TeacherUser(string username, string password, int id, double salary, string subject) : base(username, password, id)
         {
             this.Salary = salary;
             this.Subject = subject;
+            examBehaviour = new ExamTakingTeacherUser();
         }
 
         public override string ToString()
@@ -23,36 +25,19 @@ namespace UsersExam
             return base.ToString() + " " + Salary + " " + Subject;
         }
 
-        public override void Login()
+        public override string Login()
         {
-            Console.WriteLine("Teacher {0} has logged in.", username);
+            return String.Format("Teacher {0} has logged in.", username);
         }
 
-        public override void Logout()
+        public override string Logout()
         {
-            Console.WriteLine("Teacher {0} has logged out.", username);
+            return String.Format("Teacher {0} has logged out.", username);
         }
 
-        public void TakeExam()
+        public string TakeExam()
         {
-            PrepareQuestions();
-            SuperviseStudents();
-            GradeStudents();
-        }
-
-        private void GradeStudents()
-        {
-            Console.WriteLine("Teacher {0} is grading students.", username);
-        }
-
-        private void SuperviseStudents()
-        {
-            Console.WriteLine("Teacher {0} is supervising students.", username);
-        }
-
-        private void PrepareQuestions()
-        {
-            Console.WriteLine("Teacher {0} is preparing questions.", username);
+            return examBehaviour.TakeExam();
         }
     }
 }

@@ -35,7 +35,7 @@ namespace UsersExam
 
         public override string ToString()
         {
-            return Username + " " + Email + " " + Password + " " + Id;
+            return String.Format(Username + " " + Email + " " + Password + " " + Id);
         }
 
         public string DisplayInfo()
@@ -43,7 +43,14 @@ namespace UsersExam
             return ToString();
         }
 
-        public virtual void Login() {}
-        public virtual void Logout() {}
+        public virtual string Login()
+        {
+            return String.Empty;
+        }
+
+        public virtual string Logout()
+        {
+            return String.Empty;
+        }
     }
 }

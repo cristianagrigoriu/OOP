@@ -6,8 +6,8 @@ using System.Threading.Tasks;
 
 namespace UsersExam
 {
-    interface IExamTakingUser
+    public abstract class ExamTakingUser : User
     {
-        void TakeExam();
+        public abstract void TakeExam();
     }
 }
