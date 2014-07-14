@@ -13,48 +13,32 @@ namespace LinqUsers
     {
         static void Main(string[] args)
         {
-            List<User> users = new List<User>
-            {
-                new User("admin", "000", 13),
-                new User("admin2", "123", 17),
-                new User("Ringo", "s;kf", 333),
-                new StudentUser("Harry Potter", "abc", 100, 90),
-                new StudentUser("Hermione Granger", "ron", 10, 100),
-                new TeacherUser("Albus Dumbledore", "stupefy", 1, 2000.5, "Potions")
-            };
+            LinqUsersExercise exercise = new LinqUsersExercise();
+            List<User> users = exercise.CreateAndInitializeUsers();
+            exercise.ShowUsers(users, "---User List---");
 
-            Console.WriteLine("---User List---");
-            users.ForEach(x => Console.WriteLine(x.DisplayInfo()));
-            Console.WriteLine();
-
-            //List<IUser> iUsers = users.ConvertAll<IUser>(x => (IUser) x);
             var iUsers = users.Select(x => new {Username = x.Username, Password = x.Password}).ToList();
-
             Console.WriteLine("---Converted List---");
             iUsers.ForEach(x => Console.WriteLine(x.Username + " " + x.Password));
             Console.WriteLine();
 
-            List<User> admins = users.Where( x => x.Username.StartsWith("admin")).ToList();
-            Console.WriteLine("Number of admins: {0}" , admins.Count);
+            int adminCount = exercise.CountAdmins(users);
+            Console.WriteLine("Number of Admins: {0}", adminCount);
             Console.WriteLine();
 
-            List<User> firstTwoUsers = users.Take(2).OrderByDescending(x => x.Username).ToList();
-            Console.WriteLine("---First Two Users---");
-            firstTwoUsers.ForEach(x => Console.WriteLine(x.DisplayInfo()));
-            Console.WriteLine();
+            List<User> firstTwoUsers = exercise.FirstTwoUsers(users);
+            exercise.ShowUsers(firstTwoUsers, "---First Two Users---");
 
-            //e diferit de fiecare data
-            User newestUser = users.OrderByDescending(x => x.InsertTime).FirstOrDefault();
-            Console.WriteLine("Newest user is {0}", newestUser.DisplayInfo());
-            Console.WriteLine();
-           
-            User minIdUser = users.OrderBy(x => x.Id).FirstOrDefault();
-            Console.WriteLine("User with minimum id: {0}", minIdUser.DisplayInfo());
-            Console.WriteLine();
+            User newestUser = exercise.NewestUser(users);
+            exercise.ShowUsers(new List<User>() { newestUser }, "---Newest User---");
 
-            User lookedForUser = users.Where(x => x.Equals(minIdUser)).FirstOrDefault();
-            Console.WriteLine("I looked for {0}", lookedForUser.DisplayInfo());
+            User minIdUser = exercise.NewestUser(users);
+            exercise.ShowUsers(new List<User>() {minIdUser}, "---User with Minimum Id---");
 
+            User lookedForUser = exercise.FindByObject(users, minIdUser);
+            exercise.ShowUsers(new List<User>() { lookedForUser }, "---Looked For User---");
+
+            /*Display Info on Objects*/
             List<IObject> objects = new List<IObject>
             {
                 new StudentUser("Harry Potter", "horcrux", 200, 8),
