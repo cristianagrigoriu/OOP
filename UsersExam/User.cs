@@ -43,14 +43,14 @@ namespace UsersExam
             return ToString();
         }
 
-        public virtual string Login()
+        public virtual void Login()
         {
-            return String.Empty;
+            Console.WriteLine("Login");
         }
 
-        public virtual string Logout()
+        public virtual void Logout()
         {
-            return String.Empty;
+            Console.WriteLine("Logout");
         }
     }
 }

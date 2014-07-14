@@ -8,14 +8,10 @@ namespace UsersExam
 {
     class ExamTakingTeacherAssistantUser : User, IExamDelegate
     {
-        public string TakeExam()
+        public void TakeExam()
         {
-            StringBuilder result = new StringBuilder();
-            result.Append(SuperviseStudents());
-            result.AppendLine();
-            result.Append(GradeStudents());
-            result.AppendLine();
-            return result.ToString();
+            SuperviseStudents();
+            GradeStudents();
         }
 
         private string GradeStudents()

@@ -8,7 +8,6 @@ namespace UsersExam
 {
     public interface IAbstractDisplayInfo
     {
-        IDisplayInfo CreateDisplayInfoToFile();
-        IDisplayInfo CreateDisplayInfoToConsole();
+        IDisplayInfo CreateDisplay(int option);
     }
 }

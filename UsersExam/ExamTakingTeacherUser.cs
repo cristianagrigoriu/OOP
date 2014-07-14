@@ -8,31 +8,26 @@ namespace UsersExam
 {
     class ExamTakingTeacherUser : User, IExamDelegate
     {
-        public string TakeExam()
+        public void TakeExam()
         {
-            StringBuilder result = new StringBuilder();
-            result.Append(PrepareQuestions());
-            result.AppendLine();
-            result.Append(SuperviseStudents());
-            result.AppendLine();
-            result.Append(GradeStudents());
-            result.AppendLine();
-            return result.ToString();
+            PrepareQuestions();
+            SuperviseStudents();
+            GradeStudents();
         }
 
-        private string GradeStudents()
+        private void GradeStudents()
         {
-            return new StringBuilder("Teacher " + username + " is grading students.").ToString();
+            //"Teacher " + username + " is grading students.");
         }
 
-        private string SuperviseStudents()
+        private void SuperviseStudents()
         {
-            return new StringBuilder("Teacher " + username + " is supervising students.").ToString();
+            //"Teacher " + username + " is supervising students.");
         }
 
-        private string PrepareQuestions()
+        private void PrepareQuestions()
         {
-            return new StringBuilder("Teacher " + username + " is preparing questions.").ToString();
+            //"Teacher " + username + " is preparing questions.");
         }
     }
 }

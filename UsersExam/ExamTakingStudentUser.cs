@@ -8,31 +8,29 @@ namespace UsersExam
 {
     internal class ExamTakingStudentUser : User, IExamDelegate
     {
-        public string TakeExam()
+        private IExamDelegate examBehaviour;
+        private IDisplayInfo df;
+
+        public void TakeExam()
         {
-            StringBuilder result = new StringBuilder();
-            result.Append(PrepareForExam());
-            result.AppendLine();
-            result.Append(GoToExam());
-            result.AppendLine();
-            result.Append(ReceiveGrade());
-            result.AppendLine();
-            return result.ToString();
+            PrepareForExam();
+            GoToExam();
+            ReceiveGrade();
         }
 
-        private string ReceiveGrade()
+        private void ReceiveGrade()
         {
-            return new StringBuilder("Student " + this.Username + " receives grade for exam.").ToString();
+            //"Student " + this.Username + " receives grade for exam.";
         }
 
-        private string GoToExam()
+        private void GoToExam()
         {
-            return new StringBuilder("Student " + username + " is currently taking the exam.").ToString();
+            //"Student " + username + " is currently taking the exam.";
         }
 
-        private string PrepareForExam()
+        private void PrepareForExam()
         {
-            return new StringBuilder("Student " + username + " is preparing for exam.").ToString();
+            //StringBuilder("Student " + username + " is preparing for exam.";
         }
     }
 }

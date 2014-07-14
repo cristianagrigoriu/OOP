@@ -9,20 +9,27 @@ namespace UsersExam
     class AdminUser : User
     {
         public string Resposibility { get; set; }
+        private IExamDelegate examBehaviour;
 
         public AdminUser(string username, string password, int id, string responsibility) : base(username, password, id)
         {
             this.Resposibility = responsibility;
+            examBehaviour = new ExamNotTakingUser();
         }
 
-        public override string Login()
+        public void TakeExam()
         {
-            return String.Format("Admin {0} has logged in.", username);
+            examBehaviour.TakeExam();
         }
 
-        public override string Logout()
+        public override void Login()
         {
-            return String.Format("Admin {0} has logged out.", username);
+            String.Format("Admin {0} has logged in.", username);
+        }
+
+        public override void Logout()
+        {
+            String.Format("Admin {0} has logged out.", username);
         }
     }
 }

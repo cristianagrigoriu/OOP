@@ -18,19 +18,19 @@ namespace UsersExam
             examBehaviour = new ExamTakingTeacherAssistantUser();
         }
 
-        public override string Login()
+        public override void Login()
         {
-            return String.Format("Teacher assistant {0} has logged in.", username);
+            String.Format("Teacher assistant {0} has logged in.", username);
         }
 
-        public override string Logout()
+        public override void Logout()
         {
-            return String.Format("Teacher assistant {0} has logged out.", username);
+            String.Format("Teacher assistant {0} has logged out.", username);
         }
 
-        public string TakeExam()
+        public void TakeExam()
         {
-            return examBehaviour.TakeExam();
+            examBehaviour.TakeExam();
         }
     }
 }

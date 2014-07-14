@@ -42,9 +42,10 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="DisplayToConsole.cs" />
+    <Compile Include="ExamNotTakingUser.cs" />
     <Compile Include="IAbstractDisplayInfo.cs" />
     <Compile Include="AdminUser.cs" />
-    <Compile Include="ConcreteDisplayInfo.cs" />
+    <Compile Include="ConcreteDisplayFactory.cs" />
     <Compile Include="DisplayToFile.cs" />
     <Compile Include="ExamTakingStudentUser.cs" />
     <Compile Include="ExamTakingTeacherAssistantUser.cs" />

@@ -8,6 +8,6 @@ namespace UsersExam
 {
     public interface IDisplayInfo
     {
-        void DisplayInfo();
+        void DisplayInfo(string output);
     }
 }

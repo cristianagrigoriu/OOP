@@ -11,20 +11,27 @@ namespace UsersExam
     class SecretaryUser : User
     {
         public int NumberOfDocuments { get; set; }
+        private IExamDelegate examBehaviour;
 
         public SecretaryUser(string username, string password, int id, int numberOfDocuments) : base(username, password, id)
         {
             this.NumberOfDocuments = numberOfDocuments;
+            examBehaviour = new ExamNotTakingUser();
         }
 
-        public override string Login()
+        public void TakeExam()
         {
-            return String.Format("Secretary {0} has logged in.", username);
+            examBehaviour.TakeExam();
         }
 
-        public override string Logout()
+        public override void Login()
         {
-            return String.Format("Secretary {0} has logged out.", username);
+            String.Format("Secretary {0} has logged in.", username);
+        }
+
+        public override void Logout()
+        {
+            String.Format("Secretary {0} has logged out.", username);
         }
     }
 }

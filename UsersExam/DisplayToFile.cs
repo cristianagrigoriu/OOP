@@ -8,10 +8,9 @@ namespace UsersExam
 {
     class DisplayToFile : IDisplayInfo
     {
-
-        public void DisplayInfo()
+        public void DisplayInfo(string output)
         {
-            
+            System.IO.File.WriteAllText(@"C:\Users\cristiana.grigoriu\My Documents\WriteText.txt", output);
         }
     }
 }

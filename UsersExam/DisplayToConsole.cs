@@ -8,9 +8,9 @@ namespace UsersExam
 {
     class DisplayToConsole : IDisplayInfo
     {
-        public void DisplayInfo()
+        public void DisplayInfo(string output)
         {
-            throw new NotImplementedException();
+            Console.WriteLine(output);
         }
     }
 }

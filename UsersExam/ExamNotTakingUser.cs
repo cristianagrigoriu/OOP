@@ -6,8 +6,11 @@ using System.Threading.Tasks;
 
 namespace UsersExam
 {
-    public interface IExamDelegate
+    class ExamNotTakingUser : User, IExamDelegate
     {
-        void TakeExam();
+        public void TakeExam()
+        {
+            //"Does Not Take Exam!";
+        }
     }
 }
