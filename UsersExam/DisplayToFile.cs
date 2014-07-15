@@ -10,7 +10,7 @@ namespace UsersExam
     {
         public void DisplayInfo(string output)
         {
-            System.IO.File.WriteAllText(@"C:\Users\cristiana.grigoriu\My Documents\WriteText.txt", output);
+            System.IO.File.AppendAllText(@"C:\Users\cristiana.grigoriu\My Documents\WriteText.txt", output + Environment.NewLine);
         }
     }
 }

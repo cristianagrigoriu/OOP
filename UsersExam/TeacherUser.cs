@@ -25,19 +25,25 @@ namespace UsersExam
             return base.ToString() + " " + Salary + " " + Subject;
         }
 
-        public override void Login()
+        public override void Login(int option)
         {
-            String.Format("Teacher {0} has logged in.", username);
+            ConcreteDisplayFactory c = new ConcreteDisplayFactory();
+            Display = c.CreateDisplay(option);
+            if (Display != null)
+                Display.DisplayInfo(String.Format("Teacher {0} has logged in.", username));
         }
 
-        public override void Logout()
+        public override void Logout(int option)
         {
-            String.Format("Teacher {0} has logged out.", username);
+            ConcreteDisplayFactory c = new ConcreteDisplayFactory();
+            Display = c.CreateDisplay(option);
+            if (Display != null)
+                Display.DisplayInfo(String.Format("Teacher {0} has logged out.", username));
         }
 
-        public void TakeExam()
+        public void TakeExam(int writeOption)
         {
-            examBehaviour.TakeExam();
+            examBehaviour.TakeExam(writeOption, this.Username);
         }
     }
 }

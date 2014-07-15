@@ -23,6 +23,8 @@ namespace UsersExam
         protected DateTime insertTime ;
         public DateTime InsertTime { get { return insertTime; } set { insertTime = value; } }
 
+        protected IDisplayInfo Display;
+
         public User(string username, string password, int id)
         {
             this.Username = username;
@@ -43,14 +45,20 @@ namespace UsersExam
             return ToString();
         }
 
-        public virtual void Login()
+        public virtual void Login(int option)
         {
-            Console.WriteLine("Login");
+            ConcreteDisplayFactory c = new ConcreteDisplayFactory();
+            Display = c.CreateDisplay(option);
+            if (Display != null)
+                Display.DisplayInfo("Login");
         }
 
-        public virtual void Logout()
+        public virtual void Logout(int option)
         {
-            Console.WriteLine("Logout");
+            ConcreteDisplayFactory c = new ConcreteDisplayFactory();
+            Display = c.CreateDisplay(option);
+            if (Display != null) 
+                Display.DisplayInfo("Logout");
         }
     }
 }

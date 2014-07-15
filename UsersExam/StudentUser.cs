@@ -11,14 +11,11 @@ namespace UsersExam
     {
         private int Grade;
         private IExamDelegate examBehaviour;
-        private IDisplayInfo df;
 
-        public StudentUser(string username, string password, int id, int grade, int option) : base(username, password, id)
+        public StudentUser(string username, string password, int id, int grade) : base(username, password, id)
         {
             this.Grade = grade;
             examBehaviour = new ExamTakingStudentUser();
-            ConcreteDisplayFactory c = new ConcreteDisplayFactory();
-            df = c.CreateDisplay(option);
         }
 
         public override string ToString()
@@ -26,19 +23,25 @@ namespace UsersExam
             return String.Format(base.ToString() + " " + Grade);
         }
 
-        public override void Login()
+        public override void Login(int option)
         {
-            df.DisplayInfo(String.Format("Student {0} has logged in.", username));
+            ConcreteDisplayFactory c = new ConcreteDisplayFactory();
+            Display = c.CreateDisplay(option);
+            if (Display != null)
+                Display.DisplayInfo(String.Format("Student {0} has logged in.", username));
         }
 
-        public override void Logout()
+        public override void Logout(int option)
         {
-            df.DisplayInfo(String.Format("Student {0} has logged out.", username));
+            ConcreteDisplayFactory c = new ConcreteDisplayFactory();
+            Display = c.CreateDisplay(option);
+            if (Display != null)
+                Display.DisplayInfo(String.Format("Student {0} has logged out.", username));
         }
 
-        public void TakeExam()
+        public void TakeExam(int writeOption)
         {
-            examBehaviour.TakeExam();
+            examBehaviour.TakeExam(writeOption, this.Username);
         }
     }
 }

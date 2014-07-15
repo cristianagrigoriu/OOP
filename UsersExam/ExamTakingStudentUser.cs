@@ -8,29 +8,31 @@ namespace UsersExam
 {
     internal class ExamTakingStudentUser : User, IExamDelegate
     {
-        private IExamDelegate examBehaviour;
         private IDisplayInfo df;
 
-        public void TakeExam()
+        public void TakeExam(int option, string name)
         {
-            PrepareForExam();
-            GoToExam();
-            ReceiveGrade();
+            ConcreteDisplayFactory c = new ConcreteDisplayFactory();
+            df = c.CreateDisplay(option);
+
+            PrepareForExam(name);
+            GoToExam(name);
+            ReceiveGrade(name);    
         }
 
-        private void ReceiveGrade()
+        private void ReceiveGrade(string name)
         {
-            //"Student " + this.Username + " receives grade for exam.";
+            df.DisplayInfo("Student " + name + " receives grade for exam.");
         }
 
-        private void GoToExam()
+        private void GoToExam(string name)
         {
-            //"Student " + username + " is currently taking the exam.";
+            df.DisplayInfo("Student " + name + " is currently taking the exam.");
         }
 
-        private void PrepareForExam()
+        private void PrepareForExam(string name)
         {
-            //StringBuilder("Student " + username + " is preparing for exam.";
+            df.DisplayInfo("Student " + name + " is preparing for exam.");
         }
     }
 }

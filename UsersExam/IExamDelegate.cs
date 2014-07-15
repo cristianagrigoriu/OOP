@@ -8,6 +8,6 @@ namespace UsersExam
 {
     public interface IExamDelegate
     {
-        void TakeExam();
+        void TakeExam(int option, string name);
     }
 }

@@ -8,26 +8,31 @@ namespace UsersExam
 {
     class ExamTakingTeacherUser : User, IExamDelegate
     {
-        public void TakeExam()
+        private IDisplayInfo df;
+
+        public void TakeExam(int option, string name)
         {
-            PrepareQuestions();
-            SuperviseStudents();
-            GradeStudents();
+            ConcreteDisplayFactory c = new ConcreteDisplayFactory();
+            df = c.CreateDisplay(option);
+
+            PrepareQuestions(name);
+            SuperviseStudents(name);
+            GradeStudents(name);
         }
 
-        private void GradeStudents()
+        private void GradeStudents(string name)
         {
-            //"Teacher " + username + " is grading students.");
+            df.DisplayInfo("Teacher " + name + " is grading students.");
         }
 
-        private void SuperviseStudents()
+        private void SuperviseStudents(string name)
         {
-            //"Teacher " + username + " is supervising students.");
+            df.DisplayInfo("Teacher " + name + " is supervising students.");
         }
 
-        private void PrepareQuestions()
+        private void PrepareQuestions(string name)
         {
-            //"Teacher " + username + " is preparing questions.");
+            df.DisplayInfo("Teacher " + name + " is preparing questions.");
         }
     }
 }

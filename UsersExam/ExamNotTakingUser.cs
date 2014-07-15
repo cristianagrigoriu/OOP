@@ -8,9 +8,14 @@ namespace UsersExam
 {
     class ExamNotTakingUser : User, IExamDelegate
     {
-        public void TakeExam()
+        private IDisplayInfo df;
+
+        public void TakeExam(int option, string name)
         {
-            //"Does Not Take Exam!";
+            ConcreteDisplayFactory c = new ConcreteDisplayFactory();
+            df = c.CreateDisplay(option);
+
+            df.DisplayInfo("User " + name + " does not take exam!");
         }
     }
 }

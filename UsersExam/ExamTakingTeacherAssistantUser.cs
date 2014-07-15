@@ -8,20 +8,25 @@ namespace UsersExam
 {
     class ExamTakingTeacherAssistantUser : User, IExamDelegate
     {
-        public void TakeExam()
+        private IDisplayInfo df;
+
+        public void TakeExam(int option, string name)
         {
-            SuperviseStudents();
-            GradeStudents();
+            ConcreteDisplayFactory c = new ConcreteDisplayFactory();
+            df = c.CreateDisplay(option);
+
+            SuperviseStudents(name);
+            GradeStudents(name);
         }
 
-        private string GradeStudents()
+        private void GradeStudents(string name)
         {
-            return new StringBuilder("Teacher assistant " + username + " is grading students.").ToString();
+            df.DisplayInfo("Teacher assistant " + name + " is grading students.");
         }
 
-        private string SuperviseStudents()
+        private void SuperviseStudents(string name)
         {
-            return new StringBuilder("Teacher assistant " + username + " is supervising students.").ToString();
+            df.DisplayInfo("Teacher assistant " + name + " is supervising students.");
         }
     }
 }
